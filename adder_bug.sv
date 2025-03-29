@@ -3,7 +3,7 @@ module adder
 #(  parameter DATA_WIDTH=8
 ) (
     input [DATA_WIDTH-1:0] a, b,
-    output logic [DATA_WIDTH:0] sum
+    output logic [DATA_WIDTH-1:0] sum
 );
     assign sum = a + b;
 
@@ -12,10 +12,9 @@ module adder
     assign a_val = a;
     assign b_val = b;
     assign sum_val = a_val + b_val;
-    // formal properties
     always_comb begin
-            // check result
-            a_sum:  assert (sum_val == sum);
+        // check result
+        a_sum:  assert (sum_val == sum);
     end
 `endif // FORMAL
 
