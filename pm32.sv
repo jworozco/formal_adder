@@ -118,7 +118,7 @@ module pm32 (
             endcase
         end
     end
-    // Ensure `done` is asserted only in the DONE state
+    // Ensure output p is reset correctly, and also check its value in RUNNING state
     always @(posedge clk or posedge rst)
         if(rst)
             p <= 64'b0;
@@ -135,6 +135,17 @@ module pm32 (
         end
     end
 
+    //if the multiplier is 0, the output should be 0, this is likely redundant, but added for completeness
+    always @(posedge clk) begin
+        if(rst) begin
+        end else if(done && mc == 32'b0) begin
+            assert(p == 64'b0);
+        end else if(done && mp == 32'b0) begin
+            assert(p == 64'b0);
+        end else if (done && mc == 32'hFFFF_FFFF && mp == 32'hFFFF_FFFF) begin
+            assert(p == 64'hFFFF_FFFE_0000_0001);
+        end
+    end
 
 `endif // FORMAL
 
