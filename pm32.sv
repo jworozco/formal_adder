@@ -86,6 +86,8 @@ module pm32 (
             assume(start == 1'b0);
         end else begin
             if (start) begin
+                //the start signal should be high only once per multiplication, and the inputs need to be stable
+                //for the duration of the multiplication
                 assume(mc == $past(mc));
                 assume(mp == $past(mp));
             end

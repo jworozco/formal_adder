@@ -1,10 +1,10 @@
 adder
+pm32
+adder_bug
 *_basic
 *_cover
 *_nofullskip
 *_noverific
 *_prove
 *_probe
-pm32
-adder_bug
 
