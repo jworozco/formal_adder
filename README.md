@@ -1,6 +1,6 @@
 # Formal Adder
 
-This repository contains the design of an adder and a 32 bit multiplier, the code is tested using formal verification. The project focuses on creating a reliable and efficient adder/multiplier circuit using formal verification techniques.
+This repository contains the design of an adder and a 32 bit multiplier, the code is tested using formal verification. The project focuses on creating a reliable and efficient adder/multiplier circuit and using formal verification techniques to test them.
 
 ## Features
 
