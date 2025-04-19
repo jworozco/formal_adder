@@ -11,7 +11,7 @@ This repository contains the design of an adder and a 32 bit multiplier, the cod
 ## Repository Structure
 
 - adder.sv, pm32.sv: Contain the source code for the designs and the formal properties being tested.
-- adder.sby and pm32.sby: Includes test cases for verifying the functionality.
+- adder.sby and pm32.sby: Correspond to the respective tool setup for verifying the functionality.
 
 ## Getting Started
 
