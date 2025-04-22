@@ -35,7 +35,7 @@ This repository contains the design of an adder and a 32 bit multiplier, the cod
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is licensed under the [MIT License](https://github.com/jworozco/formal_adder/blob/master/LICENSE.md).
 
 ## Acknowledgments
 
